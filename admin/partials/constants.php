@@ -3,7 +3,7 @@
     session_start();
 
     //create constants to store non repeating values
-    define('SITEURL', ' https://rems-need-you.github.io/gradsy/admin/');
+    define('SITEURL', ' https://localhost/gradsy/admin/');
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
