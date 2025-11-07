@@ -1,0 +1,35 @@
+body { font-family: 'Roboto', Arial, sans-serif;
+    background: #fff3f3;
+    color: #222;
+    background-size: cover; margin: 0; }
+    header { background: #b60303; color: #fff; padding: 20px; text-align: center; }
+    .container { max-width: 1000px; margin: auto; padding: 20px; }
+    .filters { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    input, select { padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+    table { width: 100%; border-collapse: collapse; background: white; }
+    th, td { padding: 10px; border-bottom: 1px solid #ddd; }
+    th { background: #b60303; color: #fff; }
+    .rank { font-weight: bold; color: #e74c3c; }
+    tr:hover { background-color: #f0f0f0; }
+    .back-btn {
+      display: inline-block;margin: 10px 0 20px;padding: 8px 15px;background-color: #b60303;color: #fff;text-decoration: none;border-radius: 4px;font-weight: bold;justify-content: flex-end;
+    }
+    .back-btn:hover { background-color: #e74c3c; }
+    .back-link {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #b60303, #e74c3c);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+    background: linear-gradient(135deg, #a00000, #b60303);
+    transform: translateY(-3px);
+    }

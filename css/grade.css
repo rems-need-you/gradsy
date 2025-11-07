@@ -1,0 +1,51 @@
+body { font-family: 'Roboto', Arial, sans-serif; background: #fff3f3; color: #222; margin: 0; }
+  header { background: #b60303; color: #fff; padding: 20px; text-align: center; }
+  .container { max-width: 1200px; margin: auto; padding: 20px; }
+  .filters { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+  input, select { padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+  .success-msg { background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 15px; }
+  .student-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      border: 1px solid #ddd;
+  }
+  .student-card table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  .student-card th, .student-card td {
+      border: 1px solid #ddd; padding: 8px; text-align: center;
+  }
+  .student-card th { background: #b60303; color: #fff; }
+  input.grade-input { width: 60px; text-align: center; }
+  .save-btn {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #b60303;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  .save-btn:hover { background: #e74c3c; }
+  .remarks { font-weight: bold; }
+  .remarks.failed { color: #e74c3c; }
+  .remarks.passed { color: #27ae60; }
+  .overall { margin-top: 10px; font-weight: bold; }
+  .back-link {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 20px 0;
+  background: linear-gradient(135deg, #b60303, #e74c3c);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background: linear-gradient(135deg, #a00000, #b60303);
+  transform: translateY(-3px);
+}

@@ -1,0 +1,164 @@
+:root{
+    --accent: #000000; /* Dark Blue */
+    --muted: #6b7280; /* Gray */
+    --card: #f0f8ff; /* Very Light Blue tint */
+    --bg: #f0f8ff; /* Background color tint */
+}
+    
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+    margin: 0;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 36px auto;
+    padding: 24px;
+}
+
+.card{
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(2,6,23,0.06);
+}
+
+header{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.logo{
+    width: 64px;
+    height: 64px;
+    /* Dark/Light Blue Gradient */
+    background: linear-gradient(135deg, var(--accent), #659bff); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+h1{
+    margin: 0;
+    font-size: 22px;
+    color: var(--accent); /* Dark Blue */
+}
+
+p.lead{
+    color: var(--muted);
+    margin: 8px 0 18px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px;
+}
+
+.feature{
+    padding: 14px;
+    border-radius: 10px;
+    /* Blue Tint Gradient */
+    background: linear-gradient(180deg, rgba(6,106,221,0.05), rgba(255,255,255,0.6));
+}
+
+.feature h3{
+    margin: 0 0 6px;
+}
+
+.muted{
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.section-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.pill{
+    /* Blue Tint Background */
+    background: rgba(6,106,221,0.12); 
+    color: var(--accent);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.team{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.person{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(2,6,23,0.04);
+}
+
+.avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    /* Blue/Teal Gradient for avatar icon */
+    background: linear-gradient(135deg, #3498db, #1abc9c); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+footer{
+    margin-top: 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width:780px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .container{
+        margin: 18px;
+        padding: 16px;
+    }
+}
+
+.back-link {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 20px 0;
+    /* Dark/Light Blue Gradient */
+    background: linear-gradient(135deg, var(--accent), #659bff); 
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    /* Darker Blue on hover */
+    background: linear-gradient(135deg, #004a99, var(--accent));
+    transform: translateY(-3px);
+}

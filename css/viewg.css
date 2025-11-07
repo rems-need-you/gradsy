@@ -1,0 +1,42 @@
+body { font-family: 'Roboto', Arial, sans-serif;
+    background: #eeeeee;
+    color: #fff;
+    background-size: cover; margin: 0; }
+.container { max-width: 700px; margin: auto; padding: 20px; background: #fff3f3; border-radius: 8px; color: #222; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: #fff; }
+th, td { border: 1px solid #e74c3c; padding: 8px; text-align: center; }
+th { background: #b60303; color: #fff; }
+.print-btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.print-btn:hover { background: gray; }
+
+@media print {
+    body { background: white; }
+    .print-btn { display: none; }
+    .container { box-shadow: none; margin: 0; width: 100%; }
+}
+.back-link {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #b60303, #e74c3c);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+    background: linear-gradient(135deg, #a00000, #b60303);
+    transform: translateY(-3px);
+    }

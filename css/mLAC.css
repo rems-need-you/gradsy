@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff3f3;
+    color: #222;
+    }
+    .student-search {
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #eee; /* Light background for the search section */
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .student-search input[type="search"] {
+        width: 60%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+    .student-search input[type="submit"] {
+        padding: 10px 20px;
+        border-radius: 4px;
+        border: none;
+        background-color: #b60303; /* Red accent for search button */
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* The rest of your index.php content goes here */
+    .student-search.text-center {
+        text-align: center;
+    }
+    .student-search .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

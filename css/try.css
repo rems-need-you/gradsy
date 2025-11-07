@@ -1,0 +1,120 @@
+/* General styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff3f3;
+    color: #222;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #b60303;
+}
+
+form {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b60303;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e74c3c;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #b60303;
+    color: #fff;
+}
+
+a {
+    color: #b60303;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #b60303;
+}
+
+a:hover {
+    background-color: #b60303;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #fff;
+    border: 1px solid #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #b60303;
+}
+
+.student-list, .edit-grades-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-list .student, .edit-grades-form .subject-grade {
+    width: 80%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.student-list .student {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-grades-form .subject-grade input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

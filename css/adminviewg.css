@@ -1,0 +1,88 @@
+/* --- Blue Themed CSS (Modified from Original Red) --- */
+
+body { 
+    font-family: 'Roboto', Arial, sans-serif;
+    /* Light background */
+    background: #e0f7fa; /* Original #eeeeee replaced with a very light blue */
+    color: #333; /* Dark text for contrast */
+    background-size: cover; 
+    margin: 0; 
+}
+
+.container { 
+    max-width: 700px; 
+    margin: auto; 
+    padding: 20px; 
+    /* Changed container background from #fff3f3 to a clean white */
+    background: #ffffff; 
+    border-radius: 8px; 
+    color: #222; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Added a subtle shadow */
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+    background: #fff; 
+}
+
+th, td { 
+    /* Changed border color from #e74c3c (red) to a soft blue */
+    border: 1px solid #000102; 
+    padding: 8px; 
+    text-align: center; 
+}
+
+th { 
+    /* Changed background from #b60303 (dark red) to a dark blue */
+    background: #000203; 
+    color: #fff; 
+    font-weight: 600;
+}
+
+/* --- Print Button Styles --- */
+.print-btn {
+    /* Changed background from #e74c3c (red) to the main dark blue */
+    background: #066add; 
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.print-btn:hover { 
+    /* Changed hover from gray to a lighter blue */
+    background: #659bff; 
+}
+
+@media print {
+    body { background: white; }
+    .print-btn { display: none; }
+    .container { box-shadow: none; margin: 0; width: 100%; }
+}
+
+/* --- Back Link Styles --- */
+.back-link {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 20px 0;
+    /* Changed gradient from red/maroon to blue gradient */
+    background: linear-gradient(135deg, #066add, #659bff); 
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    /* Changed hover gradient to a darker blue shift */
+    background: linear-gradient(135deg, #004a99, #066add); 
+    transform: translateY(-3px);
+}

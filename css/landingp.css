@@ -1,0 +1,58 @@
+/* Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #fff3f3;
+    color: #222;
+}
+
+/* Landing Page Background */
+.landing {
+    color: #b60303;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+
+.landing h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #b60303;
+}
+
+.landing p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #b60303;
+}
+
+.landing button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #b60303;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    transform: scale(1);
+    
+}
+
+.landing button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}

@@ -1,0 +1,459 @@
+/* ================================
+    General Page Styling & Typography (CONSOLIDATED)
+================================ */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 20px 0;
+    text-align: center;
+    color: #2c3e50; /* Dark blue/gray */
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #34495e; /* Dark blue/gray */
+}
+
+/* ================================
+    Layout Containers
+================================ */
+.account-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin: 20px auto 50px;
+    max-width: 1400px;
+    padding: 0 10px;
+}
+
+.account-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 1 1 calc(33.333% - 14px); 
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.account-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ================================
+    Tables (Golden Theme Applied)
+================================ */
+.account-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed;
+    /* Responsive Table */
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.account-card th,
+.account-card td {
+    padding: 10px;
+    /* Neutral border for table cells */
+    border: 1px solid #c0c0c0; 
+    text-align: center;
+}
+
+/* 🌟 GOLDEN TABLE HEADER 🌟 */
+.account-card th {
+    background: #FFC300; /* Deep Gold/Yellow */
+    color: #333; /* Dark text for contrast */
+}
+
+.account-card td {
+    background: #fff;
+}
+
+
+/* ================================
+    Buttons (Red Theme)
+================================ */
+button,
+.back-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.25s ease;
+    text-decoration: none; /* Inherited by .back-btn */
+    color: #fff; /* Inherited by most buttons */
+    display: inline-block; /* For .back-btn */
+}
+
+/* Primary/Neutral Buttons */
+/* --- Buttons: Primary (Red) --- */
+
+/* Primary Action Buttons (Add, Submit, Back) - Keep Red */
+button:not(.update-btn):not(.cancel-btn):not(.delete-btn), 
+.add-user-btn,
+.submit-btn,
+.back-btn {
+    background: #03a8e9; /* Dark Red */
+    color: #fff;
+}
+button:not(.update-btn):not(.cancel-btn):not(.delete-btn):hover,
+.add-user-btn:hover,
+.submit-btn:hover,
+.back-btn:hover {
+    background: #e74c3c; /* Bright Red on hover */
+}
+
+/* 🔵 UPDATE BUTTON (Blue Theme) 🔵 */
+.update-btn {
+    background: #3498db; /* Blue */
+    color: #fff;
+}
+.update-btn:hover {
+    background: #2980b9; /* Darker Blue on hover */
+}
+
+/* 🔴 DELETE BUTTON (Red Theme) 🔴 */
+.delete-btn {
+    background: #e74c3c; /* Bright Red */
+    color: #fff;
+}
+.delete-btn:hover {
+    background: #b60303; /* Dark Red on hover */
+}
+
+/* Danger Button (Cancel) - Keep Red */
+.cancel-btn {
+    background: #e74c3c; /* Bright Red */
+    color: #fff;
+}
+.cancel-btn:hover {
+    background: #b60303; /* Dark Red on hover */
+}
+
+
+/* --- Buttons Group (Blue Gradient Theme) --- */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.buttons button {
+    flex: 1 1 auto;
+    min-width: 180px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    /* Blue gradient */
+    background: linear-gradient(135deg, #3498db, #2980b9); 
+    color: #fff;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.buttons button:hover {
+    background: linear-gradient(135deg, #2980b9, #1f6ca1);
+    transform: translateY(-3px);
+}
+
+/* ================================
+    Forms (General)
+================================ */
+label {
+    display: block;
+    margin: 10px 0 6px;
+    font-weight: 600;
+    color: #34495e; /* Use h2 color for labels */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+small {
+    font-size: 12px;
+    color: #95a5a6; /* Subtle gray */
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.form-buttons button {
+    min-width: 110px;
+    text-align: center;
+}
+
+/* ================================
+    Modal & Forms (Detailed Styles)
+================================ */
+
+/* Combined Modal Base Style */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background-color: rgba(0,0,0,0.55);
+    overflow-y: auto;
+    backdrop-filter: blur(4px); /* From #userModal */
+    padding: 20px; /* From #userModal */
+}
+
+/* Combined Modal Content Style */
+.modal-content,
+#userModal form {
+    background: #fff;
+    margin: 5% auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25); /* Adjusted from different values */
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    text-align: left;
+    /* Added Flex properties from #userModal form */
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.35s ease;
+}
+
+/* Modal Heading Style */
+#userModal h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 20px;
+    text-align: center;
+    color: #2c3e50; 
+    border-bottom: 3px solid #b60303; 
+    padding-bottom: 8px;
+}
+
+/* Close Button Style */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #7f8c8d; /* Neutral color */
+    font-weight: normal;
+    transition: color 0.25s ease;
+}
+.close-btn:hover {
+    color: #b60303;
+}
+
+/* Password Toggle Style (CONSOLIDATED) */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+.password-wrapper input {
+    padding-right: 45px;
+}
+.password-container { /* Renamed to .password-wrapper for consistency */
+    position: relative; 
+    display: flex; 
+    align-items: center;
+}
+/* Use #togglePassword or .toggle-password for the icon */
+#togglePassword, 
+.toggle-password {
+    position: absolute;
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    cursor: pointer; 
+    color: #666; 
+    padding: 6px;
+    border-radius: 6px;
+    z-index: 5;
+    font-size: 18px;
+    user-select: none;
+    transition: background .12s, color .12s;
+}
+#togglePassword:hover, 
+.toggle-password:hover {
+    background: rgba(0,0,0,0.04);
+    color: #a40000;
+}
+/* Small helper text style for modal form */
+#userModal small {
+    font-size: 13px;
+    color: #95a5a6;
+    margin-bottom: 5px; 
+}
+
+
+/* Form Action Buttons Container */
+#userModal .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ecf0f1;
+}
+
+/* Modal Submit Button (Blue Theme) */
+#userModal #submitBtn {
+    background: #3498db;
+    color: #fff;
+    min-width: 110px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+#userModal #submitBtn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Modal Cancel Button (Red Theme) */
+#userModal .form-actions button[type="button"] {
+    background: #e74c3c;
+    color: #fff;
+    min-width: 110px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+#userModal .form-actions button[type="button"]:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+
+/* Back Link (Green Theme) */
+.back-link {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    transition: all 0.25s ease;
+    margin: 10px 0 20px; /* Merged from general back-btn margin */
+}
+.back-link:hover {
+    background: linear-gradient(135deg, #27ae60, #1e8e4b);
+    transform: translateX(-3px);
+}
+
+/* ================================
+    Flash Messages & Animations
+================================ */
+.message,
+.flash-message {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    position: relative; /* Base for fixed positioning on flash-message */
+}
+.flash-message {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 14px;
+    color: #fff;
+    z-index: 2000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.message.success,
+.flash-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.flash-message.success { background: #27ae60; } /* Override for fixed */
+
+.message.error,
+.flash-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.flash-message.error { background: #e74c3c; } /* Override for fixed */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+    Responsive Tweaks
+================================ */
+@media (max-width: 1200px) {
+    .account-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .account-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .account-card {
+        flex: 1 1 100%; 
+    }
+
+    .modal-content,
+    #userModal form {
+        margin: 15% auto;
+        padding: 20px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-buttons button {
+        width: 100%;
+        max-width: 250px;
+    }
+}
